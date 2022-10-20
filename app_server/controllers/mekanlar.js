@@ -40,8 +40,8 @@ const anaSayfa = function(req, res) {
         "puan": "4",
         "imkanlar": ["Dünya Kahveleri","Kekler","Pastalar"],
         "koordinatlar": {
-          "enlem": "37.7",
-          "boylam": "30.5"
+          "enlem": "37.78209",
+          "boylam": "30.56254"
         },
         "saatler": [{
           "gunler": "Pazartesi-Cuma",
@@ -62,7 +62,14 @@ const anaSayfa = function(req, res) {
           "puan": "4",
           "tarih": "20 ekim 2022",
           "yorumMetni": "Kahveler iyi."
-        }
+        },
+        {
+          "yorumYapan": "Ceyhun Boran",
+          "puan": "2",
+          "tarih": "18 eylül 2022",
+          "yorumMetni": "Hizmet seviyesi aşırı kötü."
+        },
+
       ]
       }
     });
