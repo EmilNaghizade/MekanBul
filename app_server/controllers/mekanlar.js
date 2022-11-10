@@ -29,6 +29,7 @@ const anaSayfa = function(req, res) {
     );
   }
 
+
   const mekanBilgisi = function(req, res) {
     res.render('mekanbilgisi',
     {
@@ -69,6 +70,12 @@ const anaSayfa = function(req, res) {
           "tarih": "18 eylül 2022",
           "yorumMetni": "Hizmet seviyesi aşırı kötü."
         },
+        {
+          "yorumYapan": "Elif Çiftçioğlu",
+          "puan": "1",
+          "tarih": "31 eylül 2022",
+          "yorumMetni": "Ben hatay döner bekliyordum ama bana kahve verdiler. Bir şehrin her şeyi mi kötü olur ananızı s... Bu arada azeri sevgilimi çok seviyorum ama hatay döneri bir tık daha fazla seviyor olabilirim:)"
+        }
 
       ]
       }
@@ -80,14 +87,8 @@ const anaSayfa = function(req, res) {
   }
 
 
-
-
   module.exports={
-
     anaSayfa,
     mekanBilgisi,
-    yorumEkle
-
-
-    
+    yorumEkle    
   }
