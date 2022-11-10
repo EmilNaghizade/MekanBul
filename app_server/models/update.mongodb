@@ -4,7 +4,7 @@ db.mekanlar.updateOne({"ad":"Starbucks"},
   {$push: {"yorumlar": 
     {
       "_id": ObjectId(),
-      "yorumYapan": "Veli",
+      "yorumYapan": "Yaşarcan Görkem",
       "puan": 5,
       "yorumMetni": "Kahveler harika",
       "tarih": new Date()
