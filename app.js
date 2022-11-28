@@ -8,6 +8,7 @@ var indexRouter = require("./app_server/routes/index");
 var usersRouter = require("./app_server/routes/users");
 var apiRouter = require("./app_api/routes/index");
 var app = express();
+app.use(express.urlencoded({ extended: false }));
 app.use("/api", apiRouter);
 
 // view engine setup
