@@ -2,14 +2,14 @@
   "stats": {
     "suites": 9,
     "tests": 9,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 9,
-    "start": "2022-11-28T10:26:17.135Z",
-    "end": "2022-11-28T10:27:13.675Z",
-    "duration": 56540,
+    "failures": 8,
+    "start": "2022-11-28T11:10:50.425Z",
+    "end": "2022-11-28T11:10:56.017Z",
+    "duration": 5592,
     "testsRegistered": 9,
-    "passPercent": 0,
+    "passPercent": 11.11111111111111,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b262cba3-58b8-4de2-b472-a30d49fa0218",
+      "uuid": "9f168e79-9279-425b-b1f9-341f2d37f8d8",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -37,8 +37,8 @@
           "context": null,
           "code": "done();",
           "err": {},
-          "uuid": "79c84477-789a-4bbc-b626-1333cbd4273f",
-          "parentUUID": "b262cba3-58b8-4de2-b472-a30d49fa0218",
+          "uuid": "3d4a7a0c-da50-45f2-988f-2be0cee13ecd",
+          "parentUUID": "9f168e79-9279-425b-b1f9-341f2d37f8d8",
           "isHook": true,
           "skipped": false
         }
@@ -46,7 +46,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bc3ae10f-038e-45fb-b0ee-add63f9fb97c",
+          "uuid": "5b8af129-6523-4580-b2bf-f3d10efc2a9d",
           "title": "POST /api/mekanlar",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -57,7 +57,7 @@
               "title": "Yeni mekan ekle:",
               "fullTitle": "POST /api/mekanlar Yeni mekan ekle:",
               "timedOut": false,
-              "duration": 7054,
+              "duration": 865,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -66,12 +66,12 @@
               "context": null,
               "code": "const response = await request.post(\"/api/mekanlar\").send({\n  ad: \"Starbucks\",\n  adres: \"Centrum Garden\",\n  puan: 5,\n  imkanlar: \"çay,kahve,pasta\",\n  enlem: 37.83226584629666,\n  boylam: 30.524732239878013,\n  gunler1: \"Pazartesi-Cuma\",\n  acilis1: \"9:00\",\n  kapanis1: \"23:00\",\n  kapali1: false,\n  gunler2: \"Cumartesi-Pazar\",\n  acilis2: \"11:00\",\n  kapanis2: \"17:00\",\n  kapali2: false,\n});\nexpect(response.status).to.eql(201);\nprocess.env.mekanid = response.body._id;",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 201",
-                "estack": "AssertionError: expected 301 to deeply equal 201\n    at Context.<anonymous> (test.js:22:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 201\n"
+                "message": "AssertionError: expected 500 to deeply equal 201",
+                "estack": "AssertionError: expected 500 to deeply equal 201\n    at Context.<anonymous> (test.js:22:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 500\n+ 201\n"
               },
-              "uuid": "a14e6394-2f41-4649-98c0-60ee5e09b973",
-              "parentUUID": "bc3ae10f-038e-45fb-b0ee-add63f9fb97c",
+              "uuid": "6f173641-dd62-4b2f-9a5d-db0f45614984",
+              "parentUUID": "5b8af129-6523-4580-b2bf-f3d10efc2a9d",
               "isHook": false,
               "skipped": false
             }
@@ -79,17 +79,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "a14e6394-2f41-4649-98c0-60ee5e09b973"
+            "6f173641-dd62-4b2f-9a5d-db0f45614984"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 7054,
+          "duration": 865,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "54c6e379-8771-49fe-97ed-213143566276",
+          "uuid": "d60361d6-8f0f-40a6-998b-c07771144be6",
           "title": "GET /api/mekanlar",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -99,40 +99,36 @@
             {
               "title": "Girilen konum civarındaki tüm mekanları listele:",
               "fullTitle": "GET /api/mekanlar Girilen konum civarındaki tüm mekanları listele:",
-              "timedOut": true,
-              "duration": 10015,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "timedOut": false,
+              "duration": 765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const response = await request.get(\"/api/mekanlar?enlem=37&boylam=35\");\nexpect(response.status).to.eql(200);",
-              "err": {
-                "message": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js)",
-                "estack": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)",
-                "diff": null
-              },
-              "uuid": "fa909e49-7918-40ae-bf3e-f59ec56f493b",
-              "parentUUID": "54c6e379-8771-49fe-97ed-213143566276",
+              "err": {},
+              "uuid": "e5d261b2-831c-4121-ad43-10b64cbf09b9",
+              "parentUUID": "d60361d6-8f0f-40a6-998b-c07771144be6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "fa909e49-7918-40ae-bf3e-f59ec56f493b"
+          "passes": [
+            "e5d261b2-831c-4121-ad43-10b64cbf09b9"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10015,
+          "duration": 765,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "eeeafb70-c9ea-466a-b99b-fbd6ebaaad6b",
+          "uuid": "c28ea873-cb84-4a73-9793-17d84369d434",
           "title": "GET /api/mekanlar/:mekanid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -143,7 +139,7 @@
               "title": "Mekan getir:",
               "fullTitle": "GET /api/mekanlar/:mekanid Mekan getir:",
               "timedOut": false,
-              "duration": 4444,
+              "duration": 500,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -152,12 +148,12 @@
               "context": null,
               "code": "const response = await request.get(`/api/mekanlar/${process.env.mekanid}`);\nexpect(response.status).to.eql(200);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 200",
-                "estack": "AssertionError: expected 301 to deeply equal 200\n    at Context.<anonymous> (test.js:37:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 200\n"
+                "message": "AssertionError: expected 404 to deeply equal 200",
+                "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:37:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "2e095752-a663-400e-80ab-cb428432daf2",
-              "parentUUID": "eeeafb70-c9ea-466a-b99b-fbd6ebaaad6b",
+              "uuid": "453a736c-e61a-482a-9f63-97b654e4f3e8",
+              "parentUUID": "c28ea873-cb84-4a73-9793-17d84369d434",
               "isHook": false,
               "skipped": false
             }
@@ -165,17 +161,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "2e095752-a663-400e-80ab-cb428432daf2"
+            "453a736c-e61a-482a-9f63-97b654e4f3e8"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4444,
+          "duration": 500,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "f3a103ee-b9f8-4cbf-88ba-ed6d78d567d3",
+          "uuid": "43afe1bf-92bb-48c9-9f51-5799f900846f",
           "title": "PUT /api/mekanlar/:mekanid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -186,7 +182,7 @@
               "title": "Mekan Güncelle:",
               "fullTitle": "PUT /api/mekanlar/:mekanid Mekan Güncelle:",
               "timedOut": false,
-              "duration": 9069,
+              "duration": 500,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -195,12 +191,12 @@
               "context": null,
               "code": "const response = await request\n  .put(`/api/mekanlar/${process.env.mekanid}`)\n  .send({\n    ad: \"Starbucks SDÜ\",\n    adres: \"SDÜ Doğu Kampüsü\",\n    puan: 3,\n    imkanlar: \"çay,kahve,pasta,refresher\",\n    enlem: 37.8,\n    boylam: 30.5,\n    gunler1: \"Pazartesi-Cuma\",\n    acilis1: \"9:10\",\n    kapanis1: \"23:10\",\n    kapali1: true,\n    gunler2: \"Cumartesi-Pazar\",\n    acilis2: \"11:10\",\n    kapanis2: \"17:10\",\n    kapali2: true,\n  });\nexpect(response.status).to.eql(200);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 200",
-                "estack": "AssertionError: expected 301 to deeply equal 200\n    at Context.<anonymous> (test.js:61:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 200\n"
+                "message": "AssertionError: expected 404 to deeply equal 200",
+                "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:61:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "20abe230-7a08-42f8-ab38-fe99811b5581",
-              "parentUUID": "f3a103ee-b9f8-4cbf-88ba-ed6d78d567d3",
+              "uuid": "d6db2531-73df-4c73-9a25-fbb4e808c762",
+              "parentUUID": "43afe1bf-92bb-48c9-9f51-5799f900846f",
               "isHook": false,
               "skipped": false
             }
@@ -208,17 +204,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "20abe230-7a08-42f8-ab38-fe99811b5581"
+            "d6db2531-73df-4c73-9a25-fbb4e808c762"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 9069,
+          "duration": 500,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "000d28bd-f198-4d9e-b83f-e2d2617c92e8",
+          "uuid": "b95041fb-5bae-4699-b801-45f087b771da",
           "title": "POST /api/mekanlar/:mekanid/yorumlar",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -229,7 +225,7 @@
               "title": "Yorum ekle:",
               "fullTitle": "POST /api/mekanlar/:mekanid/yorumlar Yorum ekle:",
               "timedOut": false,
-              "duration": 6715,
+              "duration": 629,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -238,12 +234,12 @@
               "context": null,
               "code": "const response = await request\n  .post(`/api/mekanlar/${process.env.mekanid}/yorumlar`)\n  .send({\n    yorumYapan: \"ASY\",\n    puan: 5,\n    yorumMetni: \"Kahveler harika\",\n  });\nprocess.env.yorumid = response.body._id;\nexpect(response.status).to.eql(201);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 201",
-                "estack": "AssertionError: expected 301 to deeply equal 201\n    at Context.<anonymous> (test.js:75:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 201\n"
+                "message": "AssertionError: expected 400 to deeply equal 201",
+                "estack": "AssertionError: expected 400 to deeply equal 201\n    at Context.<anonymous> (test.js:75:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 400\n+ 201\n"
               },
-              "uuid": "20b59ceb-afd4-486e-ab90-15220eebd1d6",
-              "parentUUID": "000d28bd-f198-4d9e-b83f-e2d2617c92e8",
+              "uuid": "e0bcb8e9-1e64-4b1d-aa40-6623b3ea9098",
+              "parentUUID": "b95041fb-5bae-4699-b801-45f087b771da",
               "isHook": false,
               "skipped": false
             }
@@ -251,17 +247,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "20b59ceb-afd4-486e-ab90-15220eebd1d6"
+            "e0bcb8e9-1e64-4b1d-aa40-6623b3ea9098"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 6715,
+          "duration": 629,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "d0db216c-b3e9-42c5-94dd-27c822c46604",
+          "uuid": "bfeb8e37-831b-4b99-a948-6ffb4c0eac9c",
           "title": "GET /api/mekanlar/:mekanid/yorumlar/:yorumid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -272,7 +268,7 @@
               "title": "Yorum getir:",
               "fullTitle": "GET /api/mekanlar/:mekanid/yorumlar/:yorumid Yorum getir:",
               "timedOut": false,
-              "duration": 8214,
+              "duration": 589,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -281,12 +277,12 @@
               "context": null,
               "code": "const response = await request.get(\n  `/api/mekanlar/${process.env.mekanid}/yorumlar/${process.env.yorumid}`\n);\nexpect(response.status).to.eql(200);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 200",
-                "estack": "AssertionError: expected 301 to deeply equal 200\n    at Context.<anonymous> (test.js:84:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 200\n"
+                "message": "AssertionError: expected 404 to deeply equal 200",
+                "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:84:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "58c17cc7-dc32-475f-93d6-4ce32cbb71dc",
-              "parentUUID": "d0db216c-b3e9-42c5-94dd-27c822c46604",
+              "uuid": "cb6a7cde-5fa6-49bc-9fc1-69fcd0697b23",
+              "parentUUID": "bfeb8e37-831b-4b99-a948-6ffb4c0eac9c",
               "isHook": false,
               "skipped": false
             }
@@ -294,17 +290,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "58c17cc7-dc32-475f-93d6-4ce32cbb71dc"
+            "cb6a7cde-5fa6-49bc-9fc1-69fcd0697b23"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8214,
+          "duration": 589,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "7d98b012-1f32-4069-ac9b-04053b9c9b08",
+          "uuid": "5eb32eae-33e1-407f-b52f-d501ac2bb04a",
           "title": "PUT /api/mekanlar/:mekanid/yorumlar/:yorumid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -315,7 +311,7 @@
               "title": "Yorum güncelle:",
               "fullTitle": "PUT /api/mekanlar/:mekanid/yorumlar/:yorumid Yorum güncelle:",
               "timedOut": false,
-              "duration": 1520,
+              "duration": 553,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -324,12 +320,12 @@
               "context": null,
               "code": "const response = await request\n  .put(\n    `/api/mekanlar/${process.env.mekanid}/yorumlar/${process.env.yorumid}`\n  )\n  .send({\n    yorumYapan: \"Sinan\",\n    puan: 4,\n    yorumMetni: \"Kahveler harikaaaa\",\n  });\nexpect(response.status).to.eql(200);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 200",
-                "estack": "AssertionError: expected 301 to deeply equal 200\n    at Context.<anonymous> (test.js:99:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 200\n"
+                "message": "AssertionError: expected 404 to deeply equal 200",
+                "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:99:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "9d044c5e-2317-42ca-a6e2-eec2e27c9774",
-              "parentUUID": "7d98b012-1f32-4069-ac9b-04053b9c9b08",
+              "uuid": "1af21fb0-0f08-49d5-b030-ec4f7dc6b49e",
+              "parentUUID": "5eb32eae-33e1-407f-b52f-d501ac2bb04a",
               "isHook": false,
               "skipped": false
             }
@@ -337,17 +333,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "9d044c5e-2317-42ca-a6e2-eec2e27c9774"
+            "1af21fb0-0f08-49d5-b030-ec4f7dc6b49e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 1520,
+          "duration": 553,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "20116f24-e26a-46d1-b6d6-92928edeaeb6",
+          "uuid": "81d49992-f387-43ad-9f1a-2b93f62e29a2",
           "title": "DELETE /api/mekanlar/:mekanid/yorumlar/:yorumid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -358,7 +354,7 @@
               "title": "Yorum sil:",
               "fullTitle": "DELETE /api/mekanlar/:mekanid/yorumlar/:yorumid Yorum sil:",
               "timedOut": false,
-              "duration": 4627,
+              "duration": 546,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -367,12 +363,12 @@
               "context": null,
               "code": "const response = await request.delete(\n  `/api/mekanlar/${process.env.mekanid}/yorumlar/${process.env.yorumid}`\n);\nexpect(response.status).to.eql(200);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 200",
-                "estack": "AssertionError: expected 301 to deeply equal 200\n    at Context.<anonymous> (test.js:108:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 200\n"
+                "message": "AssertionError: expected 404 to deeply equal 200",
+                "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:108:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "a5bdbc10-5eeb-480c-adae-1caf749ae39e",
-              "parentUUID": "20116f24-e26a-46d1-b6d6-92928edeaeb6",
+              "uuid": "40f17e8d-4f96-4d0f-95ca-24e3c45ac283",
+              "parentUUID": "81d49992-f387-43ad-9f1a-2b93f62e29a2",
               "isHook": false,
               "skipped": false
             }
@@ -380,17 +376,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "a5bdbc10-5eeb-480c-adae-1caf749ae39e"
+            "40f17e8d-4f96-4d0f-95ca-24e3c45ac283"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4627,
+          "duration": 546,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "9ef6ca07-87d7-4ad9-b771-e4ebc838dd88",
+          "uuid": "3e7b4ee5-9b74-4997-a321-af9d1960377f",
           "title": "DELETE /api/mekanlar/:mekanid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -401,7 +397,7 @@
               "title": "Mekan sil:",
               "fullTitle": "DELETE /api/mekanlar/:mekanid Mekan sil:",
               "timedOut": false,
-              "duration": 4837,
+              "duration": 606,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -410,12 +406,12 @@
               "context": null,
               "code": "const response = await request.delete(\n  `/api/mekanlar/${process.env.mekanid}`\n);\nexpect(response.status).to.eql(200);",
               "err": {
-                "message": "AssertionError: expected 301 to deeply equal 200",
-                "estack": "AssertionError: expected 301 to deeply equal 200\n    at Context.<anonymous> (test.js:117:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 301\n+ 200\n"
+                "message": "AssertionError: expected 404 to deeply equal 200",
+                "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:117:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "5fddbacf-54d7-4763-8328-e9e8c2a3dc99",
-              "parentUUID": "9ef6ca07-87d7-4ad9-b771-e4ebc838dd88",
+              "uuid": "3d964bfb-0a7c-4390-9ed1-1fe595a78855",
+              "parentUUID": "3e7b4ee5-9b74-4997-a321-af9d1960377f",
               "isHook": false,
               "skipped": false
             }
@@ -423,11 +419,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5fddbacf-54d7-4763-8328-e9e8c2a3dc99"
+            "3d964bfb-0a7c-4390-9ed1-1fe595a78855"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4837,
+          "duration": 606,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
