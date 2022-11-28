@@ -1,5 +1,6 @@
 #mekanbul
 # MekanBul REST API Sonuçları #
+[Thunder Client Kolleksiyon testi]
 ![test resmi](https://github.com/EmilNaghizade/MekanBul/blob/odev6/resimler/test.jpg) <br>
 # MekanBul REST API Adresleri #
 
