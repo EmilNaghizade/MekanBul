@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 8,
-    "start": "2022-11-28T11:10:50.425Z",
-    "end": "2022-11-28T11:10:56.017Z",
-    "duration": 5592,
+    "start": "2022-11-28T11:21:16.106Z",
+    "end": "2022-11-28T11:21:21.932Z",
+    "duration": 5826,
     "testsRegistered": 9,
     "passPercent": 11.11111111111111,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9f168e79-9279-425b-b1f9-341f2d37f8d8",
+      "uuid": "cc5dd9ab-8697-484d-bb31-9ee8892b300e",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -28,7 +28,7 @@
           "title": "\"after all\" hook in \"{root}\"",
           "fullTitle": "\"after all\" hook in \"{root}\"",
           "timedOut": false,
-          "duration": 0,
+          "duration": 1,
           "state": null,
           "speed": null,
           "pass": false,
@@ -37,8 +37,8 @@
           "context": null,
           "code": "done();",
           "err": {},
-          "uuid": "3d4a7a0c-da50-45f2-988f-2be0cee13ecd",
-          "parentUUID": "9f168e79-9279-425b-b1f9-341f2d37f8d8",
+          "uuid": "f342ae34-ee2f-4470-bcec-d5f9fb7772bf",
+          "parentUUID": "cc5dd9ab-8697-484d-bb31-9ee8892b300e",
           "isHook": true,
           "skipped": false
         }
@@ -46,7 +46,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5b8af129-6523-4580-b2bf-f3d10efc2a9d",
+          "uuid": "1f1db1d7-5a0b-47d1-a835-800af4341181",
           "title": "POST /api/mekanlar",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -57,7 +57,7 @@
               "title": "Yeni mekan ekle:",
               "fullTitle": "POST /api/mekanlar Yeni mekan ekle:",
               "timedOut": false,
-              "duration": 865,
+              "duration": 803,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -70,8 +70,8 @@
                 "estack": "AssertionError: expected 500 to deeply equal 201\n    at Context.<anonymous> (test.js:22:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 500\n+ 201\n"
               },
-              "uuid": "6f173641-dd62-4b2f-9a5d-db0f45614984",
-              "parentUUID": "5b8af129-6523-4580-b2bf-f3d10efc2a9d",
+              "uuid": "3f089b2d-ba74-4b58-96f8-904e1932b80a",
+              "parentUUID": "1f1db1d7-5a0b-47d1-a835-800af4341181",
               "isHook": false,
               "skipped": false
             }
@@ -79,17 +79,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "6f173641-dd62-4b2f-9a5d-db0f45614984"
+            "3f089b2d-ba74-4b58-96f8-904e1932b80a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 865,
+          "duration": 803,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "d60361d6-8f0f-40a6-998b-c07771144be6",
+          "uuid": "3b67d54c-7fe9-440c-81de-39b2886bfc43",
           "title": "GET /api/mekanlar",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -100,7 +100,7 @@
               "title": "Girilen konum civarındaki tüm mekanları listele:",
               "fullTitle": "GET /api/mekanlar Girilen konum civarındaki tüm mekanları listele:",
               "timedOut": false,
-              "duration": 765,
+              "duration": 774,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -109,26 +109,26 @@
               "context": null,
               "code": "const response = await request.get(\"/api/mekanlar?enlem=37&boylam=35\");\nexpect(response.status).to.eql(200);",
               "err": {},
-              "uuid": "e5d261b2-831c-4121-ad43-10b64cbf09b9",
-              "parentUUID": "d60361d6-8f0f-40a6-998b-c07771144be6",
+              "uuid": "137e95c4-f577-43dd-be7b-025f8e03f884",
+              "parentUUID": "3b67d54c-7fe9-440c-81de-39b2886bfc43",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e5d261b2-831c-4121-ad43-10b64cbf09b9"
+            "137e95c4-f577-43dd-be7b-025f8e03f884"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 765,
+          "duration": 774,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "c28ea873-cb84-4a73-9793-17d84369d434",
+          "uuid": "0067fe64-b69e-43ee-8523-58c236da10c4",
           "title": "GET /api/mekanlar/:mekanid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -139,7 +139,7 @@
               "title": "Mekan getir:",
               "fullTitle": "GET /api/mekanlar/:mekanid Mekan getir:",
               "timedOut": false,
-              "duration": 500,
+              "duration": 583,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -152,8 +152,8 @@
                 "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:37:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "453a736c-e61a-482a-9f63-97b654e4f3e8",
-              "parentUUID": "c28ea873-cb84-4a73-9793-17d84369d434",
+              "uuid": "13009522-1eaa-46dc-8f4a-920a67f88b60",
+              "parentUUID": "0067fe64-b69e-43ee-8523-58c236da10c4",
               "isHook": false,
               "skipped": false
             }
@@ -161,17 +161,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "453a736c-e61a-482a-9f63-97b654e4f3e8"
+            "13009522-1eaa-46dc-8f4a-920a67f88b60"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 500,
+          "duration": 583,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "43afe1bf-92bb-48c9-9f51-5799f900846f",
+          "uuid": "b4187579-161c-45d1-9a18-b475b4f09f55",
           "title": "PUT /api/mekanlar/:mekanid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -182,7 +182,7 @@
               "title": "Mekan Güncelle:",
               "fullTitle": "PUT /api/mekanlar/:mekanid Mekan Güncelle:",
               "timedOut": false,
-              "duration": 500,
+              "duration": 555,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -195,8 +195,8 @@
                 "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:61:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "d6db2531-73df-4c73-9a25-fbb4e808c762",
-              "parentUUID": "43afe1bf-92bb-48c9-9f51-5799f900846f",
+              "uuid": "19da819d-6990-4c92-ab36-69befd47af0d",
+              "parentUUID": "b4187579-161c-45d1-9a18-b475b4f09f55",
               "isHook": false,
               "skipped": false
             }
@@ -204,17 +204,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "d6db2531-73df-4c73-9a25-fbb4e808c762"
+            "19da819d-6990-4c92-ab36-69befd47af0d"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 500,
+          "duration": 555,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "b95041fb-5bae-4699-b801-45f087b771da",
+          "uuid": "7ae61527-3d8a-48f8-bd85-f5e1fffb8235",
           "title": "POST /api/mekanlar/:mekanid/yorumlar",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -225,7 +225,7 @@
               "title": "Yorum ekle:",
               "fullTitle": "POST /api/mekanlar/:mekanid/yorumlar Yorum ekle:",
               "timedOut": false,
-              "duration": 629,
+              "duration": 632,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -238,8 +238,8 @@
                 "estack": "AssertionError: expected 400 to deeply equal 201\n    at Context.<anonymous> (test.js:75:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 400\n+ 201\n"
               },
-              "uuid": "e0bcb8e9-1e64-4b1d-aa40-6623b3ea9098",
-              "parentUUID": "b95041fb-5bae-4699-b801-45f087b771da",
+              "uuid": "cc5c9a5a-329f-4343-a99c-4f46cf28947e",
+              "parentUUID": "7ae61527-3d8a-48f8-bd85-f5e1fffb8235",
               "isHook": false,
               "skipped": false
             }
@@ -247,17 +247,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "e0bcb8e9-1e64-4b1d-aa40-6623b3ea9098"
+            "cc5c9a5a-329f-4343-a99c-4f46cf28947e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 629,
+          "duration": 632,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "bfeb8e37-831b-4b99-a948-6ffb4c0eac9c",
+          "uuid": "425d578d-2846-4e1f-a4cf-6a14c989cc70",
           "title": "GET /api/mekanlar/:mekanid/yorumlar/:yorumid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -268,7 +268,7 @@
               "title": "Yorum getir:",
               "fullTitle": "GET /api/mekanlar/:mekanid/yorumlar/:yorumid Yorum getir:",
               "timedOut": false,
-              "duration": 589,
+              "duration": 483,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -281,8 +281,8 @@
                 "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:84:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "cb6a7cde-5fa6-49bc-9fc1-69fcd0697b23",
-              "parentUUID": "bfeb8e37-831b-4b99-a948-6ffb4c0eac9c",
+              "uuid": "58ea5840-4130-4a46-961c-0e1fd108e2d7",
+              "parentUUID": "425d578d-2846-4e1f-a4cf-6a14c989cc70",
               "isHook": false,
               "skipped": false
             }
@@ -290,17 +290,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "cb6a7cde-5fa6-49bc-9fc1-69fcd0697b23"
+            "58ea5840-4130-4a46-961c-0e1fd108e2d7"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 589,
+          "duration": 483,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "5eb32eae-33e1-407f-b52f-d501ac2bb04a",
+          "uuid": "5dbd6ead-76b1-432f-a5fc-1d36a2b1b47c",
           "title": "PUT /api/mekanlar/:mekanid/yorumlar/:yorumid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -311,7 +311,7 @@
               "title": "Yorum güncelle:",
               "fullTitle": "PUT /api/mekanlar/:mekanid/yorumlar/:yorumid Yorum güncelle:",
               "timedOut": false,
-              "duration": 553,
+              "duration": 681,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -324,8 +324,8 @@
                 "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:99:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "1af21fb0-0f08-49d5-b030-ec4f7dc6b49e",
-              "parentUUID": "5eb32eae-33e1-407f-b52f-d501ac2bb04a",
+              "uuid": "f6652676-9f1a-48dd-8ca0-3492c635df48",
+              "parentUUID": "5dbd6ead-76b1-432f-a5fc-1d36a2b1b47c",
               "isHook": false,
               "skipped": false
             }
@@ -333,17 +333,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "1af21fb0-0f08-49d5-b030-ec4f7dc6b49e"
+            "f6652676-9f1a-48dd-8ca0-3492c635df48"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 553,
+          "duration": 681,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "81d49992-f387-43ad-9f1a-2b93f62e29a2",
+          "uuid": "10559044-c7e4-4a0a-b0db-76bcefd951f0",
           "title": "DELETE /api/mekanlar/:mekanid/yorumlar/:yorumid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -354,7 +354,7 @@
               "title": "Yorum sil:",
               "fullTitle": "DELETE /api/mekanlar/:mekanid/yorumlar/:yorumid Yorum sil:",
               "timedOut": false,
-              "duration": 546,
+              "duration": 717,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -367,8 +367,8 @@
                 "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:108:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "40f17e8d-4f96-4d0f-95ca-24e3c45ac283",
-              "parentUUID": "81d49992-f387-43ad-9f1a-2b93f62e29a2",
+              "uuid": "f05ab8b4-450c-42fc-8f59-9fa57ba451c5",
+              "parentUUID": "10559044-c7e4-4a0a-b0db-76bcefd951f0",
               "isHook": false,
               "skipped": false
             }
@@ -376,17 +376,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "40f17e8d-4f96-4d0f-95ca-24e3c45ac283"
+            "f05ab8b4-450c-42fc-8f59-9fa57ba451c5"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 546,
+          "duration": 717,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "3e7b4ee5-9b74-4997-a321-af9d1960377f",
+          "uuid": "551a7ad5-020e-4ce1-94bf-03279d774ad3",
           "title": "DELETE /api/mekanlar/:mekanid",
           "fullFile": "C:\\Users\\Emil\\OneDrive\\Masaüstü\\Web Tekno\\MekanBul\\test.js",
           "file": "\\test.js",
@@ -397,7 +397,7 @@
               "title": "Mekan sil:",
               "fullTitle": "DELETE /api/mekanlar/:mekanid Mekan sil:",
               "timedOut": false,
-              "duration": 606,
+              "duration": 557,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -410,8 +410,8 @@
                 "estack": "AssertionError: expected 404 to deeply equal 200\n    at Context.<anonymous> (test.js:117:32)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "3d964bfb-0a7c-4390-9ed1-1fe595a78855",
-              "parentUUID": "3e7b4ee5-9b74-4997-a321-af9d1960377f",
+              "uuid": "d9cea601-1b41-4b76-9137-134dddd5183f",
+              "parentUUID": "551a7ad5-020e-4ce1-94bf-03279d774ad3",
               "isHook": false,
               "skipped": false
             }
@@ -419,11 +419,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "3d964bfb-0a7c-4390-9ed1-1fe595a78855"
+            "d9cea601-1b41-4b76-9137-134dddd5183f"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 606,
+          "duration": 557,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000

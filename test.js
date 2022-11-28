@@ -4,10 +4,10 @@ const request = require("supertest").agent(adres);
 describe("POST /api/mekanlar", function () {
   it("Yeni mekan ekle:", async function () {
     const response = await request.post("/api/mekanlar").send({
-      ad: "Starbucks",
-      adres: "Centrum Garden",
+      ad: "Gloria Jeans",
+      adres: "SDÜ Batı Kampüsü",
       puan: 5,
-      imkanlar: "çay,kahve,pasta",
+      imkanlar: "Çay,Kahve,Pasta",
       enlem: 37.83226584629666,
       boylam: 30.524732239878013,
       gunler1: "Pazartesi-Cuma",
