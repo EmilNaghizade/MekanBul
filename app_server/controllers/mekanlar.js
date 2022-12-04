@@ -1,49 +1,51 @@
 const axios = require("axios");
-
 var apiSecenekleri = {
-  sunucu: "https://mekanbul-1.xalturwik.repl.co/",
+  sunucu: "http://localhost:3000",
+  // sunucu: "http://mekanbul.baharbubbles.repl.co",
   apiYolu: "/api/mekanlar/",
 };
-
 var mesafeyiFormatla = function (mesafe) {
   var yeniMesafe, birim;
   if (mesafe > 1) {
     yeniMesafe = parseFloat(mesafe).toFixed(1);
-    birim = " km";
+    birim = "km";
   } else {
     yeniMesafe = parseInt(mesafe * 1000, 10);
-    birim = " m";
+    birim = "m";
   }
   return yeniMesafe + birim;
 };
-
-const anaSayfaOlustur = function (res, mekanListesi) {
+var express = require("express");
+var router = express.Router();
+var anaSayfaOlustur = function (res, mekanListesi) {
   var mesaj;
-  if (!(mekanListesi instanceof Array)) {
-    mesaj = "API hatası!";
+  //gelen mekanListesi eğer dizi tipinde değilse hata ver
+  console.log(mekanListesi);
+  if (!Array.isArray(mekanListesi)) {
+    mesaj = "API HATASI: Bir şeyler ters gitti.";
     mekanListesi = [];
   } else {
+    //Eğer belirlenen mesafe içind mekan bulunamadıysa bilgilendir
     if (!mekanListesi.length) {
-      mesaj = "Civarda herhangi bir mekan yok.";
+      mesaj = "Civarda herhangi bir mekan bulunamadı.";
     }
   }
   res.render("anasayfa", {
     baslik: "Anasayfa",
     sayfaBaslik: {
-      siteAd: "Mekanbul",
-      slogan: "Mekanları Keşfet",
+      siteAd: "MekanBul",
+      slogan: "Civardaki Mekanları Keşfet!",
     },
     mekanlar: mekanListesi,
     mesaj: mesaj,
   });
 };
-
 const anaSayfa = function (req, res, next) {
   axios
     .get(apiSecenekleri.sunucu + apiSecenekleri.apiYolu, {
       params: {
-        enlem: req.query.enlem,
-        boylam: req.query.boylam,
+        enlem: req.query.enlem ? req.query.enlem : 37,
+        boylam: req.query.boylam ? req.query.boylam : 30.5,
       },
     })
     .then(function (response) {
@@ -59,7 +61,7 @@ const anaSayfa = function (req, res, next) {
     });
 };
 
-const detaySayfasiOlustur = function (res, mekanDetaylari) {
+var detaySayfasiOlustur = function (res, mekanDetaylari) {
   mekanDetaylari.koordinat = {
     enlem: mekanDetaylari.koordinat[0],
     boylam: mekanDetaylari.koordinat[1],
@@ -69,7 +71,6 @@ const detaySayfasiOlustur = function (res, mekanDetaylari) {
     mekanDetay: mekanDetaylari,
   });
 };
-
 var hataGoster = function (res, hata) {
   var mesaj;
   if (hata.response.status == 404) {
@@ -82,7 +83,6 @@ var hataGoster = function (res, hata) {
     mesaj: mesaj,
   });
 };
-
 const mekanBilgisi = function (req, res) {
   axios
     .get(apiSecenekleri.sunucu + apiSecenekleri.apiYolu + req.params.mekanid)
@@ -95,7 +95,7 @@ const mekanBilgisi = function (req, res) {
 };
 
 const yorumEkle = function (req, res, next) {
-  res.render("yorumekle", { title: "Yorum Ekle" });
+  res.render("yorumekle", { title: "Yorum ekle" });
 };
 
 module.exports = {
