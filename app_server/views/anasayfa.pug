@@ -1,6 +1,5 @@
 extends layout
 include fonksiyonlar/yildiz
-
 block content
   #banner.page-header
     .row 
@@ -19,10 +18,10 @@ block content
             a(href='/mekan/'+mekanid)=mekan.ad
             small &nbsp;
             +puanOlustur(mekan.puan)
-          span.badge.pull-right.badge-default= mekan.mesafe
-          p.address= mekan.adres
+          span.badge.pull-right.badge-default #{mekan.mesafe}
+          p.address #{mekan.adres}
           p
             each imkan in mekan.imkanlar
-              span.label.label-warning= imkan 
+              span.label.label-warning #{imkan} 
               | &nbsp;
       | &nbsp;
