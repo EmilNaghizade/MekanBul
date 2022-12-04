@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 var apiSecenekleri = {
-  sunucu: "http://localhost:3000",
+  sunucu: "https://mekanbul-1.xalturwik.repl.co/",
   apiYolu: "/api/mekanlar/",
 };
 
