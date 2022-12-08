@@ -66,6 +66,7 @@ const mekanEkle = function (req, res) {
     {
       ad: req.body.ad,
       adres: req.body.adres,
+      puan: req.body.puan,
       imkanlar: req.body.imkanlar.split(","),
       koordinat: [parseFloat(req.body.enlem), parseFloat(req.body.boylam)],
       saatler: [
