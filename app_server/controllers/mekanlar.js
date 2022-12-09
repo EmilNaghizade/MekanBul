@@ -111,6 +111,7 @@ const yorumEkle = function (req, res) {
 const yorumumuEkle = function (req, res) {
   var gonderilenYorum, mekanid;
   mekanid = req.params.mekanid;
+  console.log(mekanid);
   if (!req.body.adsoyad || !req.body.yorum) {
     res.redirect("/mekan/" + mekanid + "/yorum/yeni?hata=evet");
   } else {
@@ -132,6 +133,7 @@ const yorumumuEkle = function (req, res) {
       });
   }
 };
+
 var yorumSema = new mongoose.Schema({
   yorumYapan: { type: String, required: true },
   puan: { type: Number, default: 0, min: 0, max: 5 },
