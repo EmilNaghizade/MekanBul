@@ -111,7 +111,6 @@ const yorumEkle = function (req, res) {
 const yorumumuEkle = function (req, res) {
   var gonderilenYorum, mekanid;
   mekanid = req.params.mekanid;
-  console.log(mekanid);
   if (!req.body.adsoyad || !req.body.yorum) {
     res.redirect("/mekan/" + mekanid + "/yorum/yeni?hata=evet");
   } else {
@@ -129,7 +128,7 @@ const yorumumuEkle = function (req, res) {
         res.redirect("/mekan/" + mekanid);
       })
       .catch(function (hata) {
-        hataGoster(req, res, hata);
+        hataGoster(res, hata);
       });
   }
 };
