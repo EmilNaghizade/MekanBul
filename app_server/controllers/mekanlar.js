@@ -1,7 +1,7 @@
 const axios = require("axios");
 var apiSecenekleri = {
   // sunucu: "http://localhost:3000",
-  sunucu: "https://mekanbul.xalturwik.repl.co/",
+  sunucu: "https://MekanBul.xalturwik.repl.co",
   apiYolu: "/api/mekanlar/",
 };
 var mesafeyiFormatla = function (mesafe) {
@@ -96,14 +96,16 @@ const mekanBilgisi = function (req, res) {
     });
 };
 
-const yorumEkle = function (req, res, next) {
+const yorumEkle = function (req, res) {
   var mekanAdi = req.session.mekanAdi;
   mekanid = req.params.mekanid;
-  if (!mekanAdi) res.redirect("/mekan/" + mekanid);
-  else
+  if (!mekanAdi) {
+    res.redirect("/mekan/" + mekanid);
+  } else {
     res.render("yorumekle", {
       baslik: mekanAdi + " mekanına yorum ekle",
     });
+  }
 };
 
 const yorumumuEkle = function (req, res) {
@@ -130,7 +132,6 @@ const yorumumuEkle = function (req, res) {
       });
   }
 };
-
 var yorumSema = new mongoose.Schema({
   yorumYapan: { type: String, required: true },
   puan: { type: Number, default: 0, min: 0, max: 5 },
